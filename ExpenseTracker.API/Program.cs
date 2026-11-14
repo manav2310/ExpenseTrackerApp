@@ -12,11 +12,23 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())    
 {
     app.MapOpenApi();
+
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "v1");
+    });
 }
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.MapGet("/", () => Results.Ok(new
+{
+    message = "ExpenseTracker API is running.",
+    openApi = "/openapi/v1.json",
+    weatherForecast = "/WeatherForecast"
+}));
 
 app.MapControllers();
 
