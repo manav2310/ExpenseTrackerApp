@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="ExpenseTracker.API/ExpenseTracker.API.csproj" Id="f4ab1cd3-b301-4ba2-8cb6-cffd0259a29c" />
+  <Project Path="ExpenseTracker.Shared/ExpenseTracker.Shared.csproj" Id="ffe20540-7d98-4851-9f32-7f78ba52e606" />
   <Project Path="ExpenseTrackerApp/ExpenseTrackerApp.Mobile.csproj">
     <Deploy Solution="Debug|*" />
   </Project>
